@@ -1,0 +1,125 @@
+Question 1: Ask User to enter name, then display the same name with welcome message.
+
+var name = prompt("What is your name?")
+console.log("Welcome "+name)
+
+Question 2: Ask User to enter number, then check either the number is Even or Odd.
+Hint: parseInt(‘2’) => 2
+var number = prompt("Please check value is even or odd")
+number = +number;
+if(number%2 == 0){
+alert("the value is even "+number)
+}else if(number%3 == 0){
+alert("the value is odd "+number)
+}
+
+Question 3: If num =5; Solve these individual blocks separately ..
+++num + num-- + --num + --num + num == 22 ?
+Note: In notepad, using your brain not using console :)
+
+Like:
+num=5
+1) solving ++num:
+due to pre-increment -> 6
+2) solving num--
+due to post decrement ->
+etc ….
+
+++num:
+due to pre-increment -> 6
+
+num--:
+due to post-decrement -> 6
+
+--num:
+due to pre-decrement -> 4
+
+--num:
+due to pre-decrement -> 3
+
+num:
+num -> 3
+
+
+Question 4: Ask user to enter day in numbers, and show user which day it is Like (Moday, Tuesday etc...)
+Show error ‘Enter number within range etc…….’ if user enter an invalid number….
+
+
+var number = prompt("enter day in number\n1 => Monday\n2 => Tuesday\n3 => Wednesday\n4 => Thusday\n5 => Friday\n6 => Saturday\n7 => Sunday", 1)
+number = +number;
+if(number == 1){
+alert("Monday")
+}else if(number == 2){
+alert("Tuesday")
+}else if(number == 3){
+alert("Wednesday")
+}else if(number == 4){
+alert("Thusday")
+}else if(number == 5){
+alert("Friday")
+}else if(number == 6){
+alert("Saturday")
+}else if(number == 7){
+alert("Sunday")
+}else{
+console.error("Invalid Number")
+}
+
+
+Question 5: What’s the difference between === & == , != & !== ?
+
+=== its check the condition with posttype example below:
+var number = prompt("enter day in number\n1 => Monday\n2 => Tuesday\n3 => Wednesday\n4 => Thusday\n5 => Friday\n6 => Saturday\n7 => Sunday", 1)
+if(number === "1"){console.log("true")}
+number = +number;
+if(number === 1){console.log("true")}
+
+== its check the condition not posttype example below:
+var number = prompt("enter day in number\n1 => Monday\n2 => Tuesday\n3 => Wednesday\n4 => Thusday\n5 => Friday\n6 => Saturday\n7 => Sunday", 1)
+if(number == "1"){console.log("true")}
+number = +number;
+if(number == 1){console.log("true")}
+
+!== its check the condition is false and posttype need to be true example below:
+var number = prompt("enter day in number\n1 => Monday\n2 => Tuesday\n3 => Wednesday\n4 => Thusday\n5 => Friday\n6 => Saturday\n7 => Sunday", 1)
+if(number !== "1"){console.log("true")}
+number = +number;
+if(number !== 1){console.log("true")}
+
+
+!= its check the condition is false example below:
+var number = prompt("enter day in number\n1 => Monday\n2 => Tuesday\n3 => Wednesday\n4 => Thusday\n5 => Friday\n6 => Saturday\n7 => Sunday", 1)
+if(number != "1"){console.log("true")}
+number = +number;
+if(number != 1){console.log("true")}
+
+Question 6:	Write a table of 9 with proper formatting ? 
+var number = prompt("enter number to write a table", 1)
+number = +number;
+if(number != null){
+for(var i = 0;i<10;++i)
+console.log(number+"X"+number+"="+number*i);
+}
+
+Question 7:
+Make a program that show user a welcome message Welcome To Farenheit/Celcius Convertor. 
+i) then ask user to select either they want to convert from farenhite to celcius or celcius to farenhite ?
+ii) then ask for the conversion number
+iii) calculate the result & show it in alert 
+
+console.log("Welcome To Farenheit/Celcius Convertor.")
+var number = prompt("select either they want to convert from farenhite to celcius or celcius to farenhite\n1 => farenhite to celcius\n2 => celcius to farenhite", 1)
+number = +number;
+if(number == 1){
+console.log("Welcome To Farenheit Convertor.")
+var celcius = prompt("Please provide conversion number", 1)
+farenhite = (+celcius * 9/5) + 32;
+alert(celcius+" Celsius is "+farenhite+" Fahrenheit")
+}else if(number == 2){
+console.log("Welcome To Celcius Convertor.")
+var farenhite = prompt("Please provide conversion number", 1)
+celcius = (+farenhite - 32) / 1.8;
+alert(farenhite +" Fahrenheit is "+celcius+" Celsius")
+} else {
+alert("Invalid Number")
+}
